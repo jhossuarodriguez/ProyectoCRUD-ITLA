@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SistemaGestorPacientes.Core.Domain.Entities.Paciente>
+
+@{
+    ViewData["Title"] = "Lista de Pacientes";
+}
+
+<h2>Pacientes</h2>
+
+<a asp-action="Create" class="btn btn-success">Agregar Paciente</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Foto</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>Cédula</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Consultorio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var paciente in Model)
+        {
+            <tr>
+                <td>
+                    @if (paciente.Foto != null)
+                    {
+                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(paciente.Foto)" width="50" height="50" />
+                    }
+                    else
+                    {
+                        <span>Sin imagen</span>
+                    }
+                </td>
+                <td>@paciente.Nombre</td>
+                <td>@paciente.Apellido</td>
+                <td>@paciente.Telefono</td>
+                <td>@paciente.Cedula</td>
+                <td>@paciente.FechaNacimiento.ToShortDateString()</td>
+                <td>@(paciente.ConsultorioId != null ? paciente.ConsultorioId : "No asignado")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@paciente.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@paciente.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
