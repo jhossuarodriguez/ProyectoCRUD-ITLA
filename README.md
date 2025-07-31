@@ -68,3 +68,4 @@ Si deseas contribuir, sigue estos pasos:
 5️⃣ Abre un Pull Request
 
 PR: Agendas de cita
+PR: Autenticación con JWT
