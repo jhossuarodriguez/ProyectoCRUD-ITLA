@@ -67,3 +67,4 @@ Si deseas contribuir, sigue estos pasos:
 2️⃣ Realiza tus cambios y confirma (`git commit -m 'Añadir nueva funcionalidad'`)
 5️⃣ Abre un Pull Request
 
+Hotfix: Validación de nulos en consultorios
