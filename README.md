@@ -66,5 +66,3 @@ Si deseas contribuir, sigue estos pasos:
 1️⃣ Realiza un fork del proyecto
 2️⃣ Realiza tus cambios y confirma (`git commit -m 'Añadir nueva funcionalidad'`)
 5️⃣ Abre un Pull Request
-
-PR: Gestión de médicos
