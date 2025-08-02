@@ -67,5 +67,3 @@ Si deseas contribuir, sigue estos pasos:
 2️⃣ Realiza tus cambios y confirma (`git commit -m 'Añadir nueva funcionalidad'`)
 5️⃣ Abre un Pull Request
 
-
-PR de prueba educativa para QA.
